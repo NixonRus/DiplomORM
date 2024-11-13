@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Посты</title>
+</head>
+<body>
+    <h1>Авторы и посты</h1>
+    <p><h3>|||||||||||-----------¯\_(ツ)_/¯------------||||||||||||||</h3></p>
+    {% for i in Posts %}
+        <h2>{{ i.title }}</h2>
+        <h3>{{ i.body }}</h3>
+        <h4>{{ i.author }}</h4>
+        <p>/////////////////////</p>
+    {% endfor %}
+
+    <p><a href="/homepage"><button>На главную</button></a></p>
+</body>
+</html>

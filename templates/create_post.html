@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создать пост</title>
+</head>
+<body>
+    <h1>Напишите пост</h1>
+    <p><h3>|||||||||||-----------¯\_(ツ)_/¯------------||||||||||||||</h3></p>
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group">
+            {{ field.label_tag }}
+            <div> {{ field }} </div>
+        </div>
+        {% endfor %}
+        <p><button type="submit">Создать</button></p>
+    </form>
+
+</body>
+</html>

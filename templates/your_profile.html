@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+</head>
+<body>
+    <h1> Ваши посты:</h1>
+    <p><h3>|||||||||||-----------¯\_(ツ)_/¯------------||||||||||||||</h3></p>
+
+
+
+    {% for i in post_list %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <h1> {{ i.title }} </h1>
+            <p> {{ i.body }} </p>
+            <p><button class="butt" type="submit" name="delete" value="{{ i.id }}">Удалить</button></p>
+        </form>
+
+    {% endfor %}
+    <p><a href="create_post/"><button>Создать пост</button></a></p>
+    <p><a href="/"><button>Выйти</button></a></p>
+    <p><a href="/homepage"><button>На главную</button></a></p>
+
+</body>
+
+</html>

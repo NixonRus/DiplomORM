@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторы</title>
+</head>
+<body>
+    <h1>Авторы</h1>
+    <p><h3>|||||||||||-----------¯\_(ツ)_/¯------------||||||||||||||</h3></p>
+    {% for i in Authors %}
+        <h3>{{ i.username }}</h3>
+        <p>///////////////</p>
+    {% endfor %}
+
+    <p><a href="/homepage"><button>На главную</button></a></p>
+</body>
+</html>

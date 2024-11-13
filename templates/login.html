@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+</head>
+<body>
+    <h1>Авторизуйтесь</h1>
+    <p><h3>|||||||||||-----------¯\_(ツ)_/¯------------||||||||||||||</h3></p>
+    <form method="post">
+        {% csrf_token %}
+
+        {% if 'error' in info %}
+            <p>{{ info.error }}</p>
+        {% endif %}
+
+        {% for field in form %}
+        <div class="form-group">
+            {{ field.label_tag }}
+            <div> {{ field }} </div>
+        </div>
+        {% endfor %}
+<!--        <label for="username">Введите логин</label>-->
+<!--        <input type="text" id="username" name="username" maxlength="20" required>-->
+
+<!--        <label for="password">Введите пароль</label>-->
+<!--        <input type="text" id="password" name="password" minlength="8" maxlength="20" required>-->
+        <p><button type="submit">Вход</button></p>
+
+    </form>
+    <p><a href="/registration"><button><h5>Регистрация</h5></button></a>
+    <p><a href="/homepage"><button>На главную</button></a></p>
+</body>
+</html>
